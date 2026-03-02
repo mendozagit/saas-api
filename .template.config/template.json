@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "JasonTaylorDev",
+  "classifications": [
+    "Aspire",
+    "Web",
+    "ASP.NET",
+    "Clean Architecture"],
+  "name": "SaasApi Solution",
+  "description": "A Clean Architecture Solution Template for creating a Web API with ASP.NET Core.",
+  "identity": "SaasApi.Solution.CSharp",
+  "groupIdentity": "SaasApi.Solution",
+  "shortName": "saas-sln",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SaasApi",
+  "preferNameDirectory": true,
+  "symbols": {
+    "caPackageVersion": {
+      "type": "generated",
+      "generator": "constant",
+      "replaces": "caPackageVersion",
+      "parameters": {
+        "value": "0.0.0"
+      }
+    },
+    "caRepositoryUrl": {
+      "type": "generated",
+      "generator": "constant",
+      "replaces": "caRepositoryUrl",
+      "parameters": {
+        "value": "https://github.com/jasontaylordev/SaasApi"
+      }
+    },
+    "UseAspire": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Use .NET Aspire"
+    },
+    "PipelineProvider": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "azdo",
+          "description": "Azure Pipelines"
+        },
+        {
+          "choice": "github",
+          "description": "GitHub Actions"
+        }
+      ],
+      "defaultValue": "github",
+      "description": "The pipeline provider to use (github for Github Actions and azdo for Azure Pipelines)."
+    },
+    "UseAzurePipelines": {
+      "type": "computed",
+      "value": "(PipelineProvider == \"azdo\")"
+    },
+    "UseGithubActions": {
+      "type": "computed",
+      "value": "(PipelineProvider == \"github\")"
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".vs/**/*",
+        ".git/**/*",
+        ".azure/**/*",
+        ".template.config/**/*",
+        "templates/**/*",
+        "artifacts/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "*.nuspec",
+        "src/Web/appsettings.Development.json",
+        "tests/Application.FunctionalTests/SqlTestcontainersTestDatabase.cs",
+        "tests/Application.FunctionalTests/SqlTestDatabase.cs",
+        "tests/Application.FunctionalTests/appsettings.json",
+        ".azdo/**/*",
+        ".github/**/*"
+      ],
+      "rename": {
+        "README-template.md": "README.md"
+      },
+      "modifiers": [
+        {
+          "condition": "(UseAzurePipelines)",
+          "include": [
+            ".azdo/**/*"
+          ]
+        },
+        {
+          "condition": "(UseGithubActions)",
+          "include": [
+            ".github/**/*"
+          ]
+        },
+        {
+          "condition": "(true)",
+          "include": [
+            "src/Web/appsettings.Development.json",
+            "tests/Application.FunctionalTests/SqlTestcontainersTestDatabase.cs",
+            "tests/Application.FunctionalTests/SqlTestDatabase.cs",
+            "tests/Application.FunctionalTests/appsettings.json"
+          ]
+        },
+        {
+          "condition": "(!UseAspire)",
+          "exclude": [
+            "src/AppHost/**",
+            "src/ServiceDefaults/**"
+          ]
+        }
+      ]
+    }
+  ]
+}
