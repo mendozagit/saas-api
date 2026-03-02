@@ -1,13 +1,13 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "JasonTaylorDev",
+  "author": "mendozagit",
   "classifications": [
     "Aspire",
     "Web",
     "ASP.NET",
-    "Clean Architecture"],
+    "SaaS API"],
   "name": "SaasApi Solution",
-  "description": "A Clean Architecture Solution Template for creating a Web API with ASP.NET Core.",
+  "description": "A SaaS API Solution Template for creating a Web API with ASP.NET Core.",
   "identity": "SaasApi.Solution.CSharp",
   "groupIdentity": "SaasApi.Solution",
   "shortName": "saas-sln",
@@ -31,7 +31,7 @@
       "generator": "constant",
       "replaces": "caRepositoryUrl",
       "parameters": {
-        "value": "https://github.com/jasontaylordev/SaasApi"
+        "value": "https://github.com/mendozagit/saas-api"
       }
     },
     "UseAspire": {

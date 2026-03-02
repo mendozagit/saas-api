@@ -1,8 +1,8 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "JasonTaylorDev",
+  "author": "mendozagit",
   "classifications": [
-    "Clean Architecture"
+    "SaaS API"
   ],
   "name": "SaasApi Solution Use Case",
   "description":  "Create a new use case (query or command)",

@@ -1,6 +1,6 @@
 # SaasApi Solution Template
 
-A Clean Architecture Solution Template for creating Web API applications with ASP.NET Core and SQL Server.
+A SaaS API Solution Template for creating Web API applications with ASP.NET Core and SQL Server.
 
 ## Getting Started
 
@@ -65,7 +65,7 @@ This process includes:
 - Seeding default roles, users, and data
 
 For production environments, consider using EF Core migrations or migration bundles during deployment.
-For more information, see [Database Initialisation Strategies for EF Core](https://jasontaylor.dev/ef-core-database-initialisation-strategies).
+For more information, see the EF Core documentation on database initialisation strategies.
 
 ## Deploy
 

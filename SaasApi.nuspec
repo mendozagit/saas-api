@@ -5,19 +5,19 @@
     <id>SaasApi.Solution.Template</id>
     <version>0.0.0</version>
     <title>SaasApi Solution Template</title>
-    <authors>JasonTaylorDev</authors>
+    <authors>mendozagit</authors>
     <description>SaasApi Solution Template for .NET 10</description>
     <summary>
-      A Clean Architecture Solution Template for creating Web API apps with ASP.NET Core (and optional Aspire).
+      A SaaS API Solution Template for creating Web API apps with ASP.NET Core (and optional Aspire).
     </summary>
     <releaseNotes></releaseNotes>
 
-    <projectUrl>https://github.com/JasonTaylorDev/SaasApi</projectUrl>
-    <repository type="git" url="https://github.com/JasonTaylorDev/SaasApi.git" branch="main" />
+    <projectUrl>https://github.com/mendozagit/saas-api</projectUrl>
+    <repository type="git" url="https://github.com/mendozagit/saas-api.git" branch="main" />
 
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>clean-architecture project template csharp dotnet aspire web-api</tags>
+    <tags>saas-api project template csharp dotnet aspire web-api</tags>
     <icon>icon.png</icon>
     <readme>README.md</readme>
 
